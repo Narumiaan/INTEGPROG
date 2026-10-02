@@ -62,7 +62,28 @@ if (sections.length && sectionLinks.length) {
     });
 }
 
-// Simple footer year update
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault(); 
+
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+    const responseEl = document.getElementById('formResponse');
+
+    if (!name || !email || !message) {
+        responseEl.style.color = '#e74c3c'; // Red warning color
+        responseEl.textContent = 'Please fill in all the required fields.';
+        return;
+    }
+
+    // Success state
+    responseEl.style.color = '#2ecc71'; // Green success color
+    responseEl.textContent = `Thank you, ${name}! Your message has been sent successfully.`;
+    
+    // Reset form fields
+    this.reset();
+});
+
 const yearElements = document.querySelectorAll("footer p");
 
 yearElements.forEach(function (footerText) {

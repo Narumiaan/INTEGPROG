@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>My Personal Website</title>
 
 <link rel="stylesheet" href="style.css">
@@ -16,13 +16,16 @@
 
 <div class="navbar">
     <a href="#about">About Me</a>
+    <a href="#project">Projects</a>
     <a href="#hobbies">Hobbies</a>
     <a href="#websites">Favorite Websites</a>
     <a href="#contact">Contact</a>
+    
 
     <div class="dropdown">
         <button class="dropbtn">Interests</button>
         <div class="dropdown-content">
+            <a href="projects.html">Projects</a>
             <a href="music.html">Music</a>
             <a href="shows.html">Shows</a>
         </div>
@@ -41,6 +44,14 @@
         to show my support for the shows I love. I also love the color blue because it reminds me of the sky, which brings me a sense of calmness.
         </p>
     </div>
+</section>
+
+<section id="project">
+    <H2>Projects</H2>
+    <p> I specialize in illustration! I mostly do commission work, meaning people commission me to draw whatever they want. Click on the link
+        to see the work I've done for my socials/clients!
+    </p>
+    <a href="projects.html">PROJECTS HERE</a>
 </section>
 
 <section id="hobbies">
@@ -71,10 +82,33 @@
     </ol>
 </section>
 
-<section id="contact">
-    <h2>Contact Me</h2>
-    <p>Email: estrellaab@students.national-u.edu.ph</p>
-    <p>Phone: 09XXXXXXXXX</p>
+<section id="contact" class="contact-section">
+    <div class="contact-container">
+        <div class="contact-header">
+            <h2>Get in Touch</h2>
+            <p>We'd love to hear from you. Fill out the form below and we'll get back to you soon.</p>
+        </div>
+        
+        <form id="contactForm" class="contact-form">
+            <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Your Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message here..." required></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Send Message</button>
+            <p id="formResponse" class="form-response"></p>
+        </form>
+    </div>
 </section>
 
 <footer>
